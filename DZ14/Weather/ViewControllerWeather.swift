@@ -123,18 +123,18 @@ class ViewControllerWeather: UIViewController, UITableViewDataSource, UITableVie
                 case 0:
                     cell.textLabel?.text = "Температура через 3 часа: \(Int(round(weatherDataThreeHours.list[0].main.temp)))°"
                     if let oneHour = cell.textLabel?.text{
-                        UserDafautsWeather.shared.saveWeatheroneHour(oneHour: oneHour)
-                        print("Температура через 3 часа: \(defaults.string(forKey: KeyWeather.oneHour))°")
+                        defaults.set(oneHour, forKey: KeyWeather.oneHour)
+                        print("Температура через 3 часа: \(defaults.string(forKey: KeyWeather.oneHour))")
                         }
                 case 1:
                     cell.textLabel?.text = "Температура через 6 часов: \(Int(round(weatherDataThreeHours.list[1].main.temp)))°"
                    if let twoHour = cell.textLabel?.text{
-                    UserDafautsWeather.shared.saveWeathertwoHour(twoHour: twoHour)
+                    defaults.set(twoHour, forKey: KeyWeather.twoHour)
                         }
                 default:
                     cell.textLabel?.text = "Температура через 9 часов: \(Int(round(weatherDataThreeHours.list[2].main.temp)))°"
                 if let threeHour = cell.textLabel?.text{
-                    UserDafautsWeather.shared.saveWeatherthreeHour(threeHour: threeHour)
+                    defaults.set(threeHour, forKey: KeyWeather.threeHour)
                                  }
                     
                 }
@@ -144,30 +144,30 @@ class ViewControllerWeather: UIViewController, UITableViewDataSource, UITableVie
                 switch indexPath.row {
                 case 0: cell.textLabel?.text = "Сегодня: \(Int(round(weatherDataThreeHours.list[0].main.temp)))°"
                if let oneDay = cell.textLabel?.text{
-             UserDafautsWeather.shared.saveWeatheroneDay(oneDay: oneDay)
+                defaults.set(oneDay, forKey: KeyWeather.oneDay)
                     }
                 case 1: cell.textLabel?.text = "Завтра: \(Int(round(weatherDataThreeHours.list[8].main.temp)))°"
                 if let twoDay = cell.textLabel?.text{
-                UserDafautsWeather.shared.saveWeathertwoDay(twoDay: twoDay)
+                    defaults.set(twoDay, forKey: KeyWeather.twoDay)
                     }
                 case 2: cell.textLabel?.text = "Послезавтра: \(Int(round(weatherDataThreeHours.list[16].main.temp)))°"
                 if let threeDay = cell.textLabel?.text{
-               UserDafautsWeather.shared.saveWeatherthreeDay(threeDay: threeDay)
+                    defaults.set(threeDay, forKey: KeyWeather.threeDay)
                     }
                 case 3: cell.textLabel?.text = "После-послезавтра: \(Int(round(weatherDataThreeHours.list[24].main.temp)))°"
                 if let fourDay = cell.textLabel?.text{
-                  UserDafautsWeather.shared.saveWeatherfourDay(fourDay: fourDay)
+                    defaults.set(fourDay, forKey: KeyWeather.fourDay)
                     }
                 default:
                     cell.textLabel?.text = "После-после-послезавтра: \(Int(round(weatherDataThreeHours.list[36].main.temp)))°"
                 if let fiveDay = cell.textLabel?.text{
-             UserDafautsWeather.shared.saveWeatherfiveDay(fiveDay: fiveDay)
+                    defaults.set(fiveDay, forKey: KeyWeather.fiveDay)
                     }
                 }
                  return cell
                 
             }
-        //UserDafautsWeather.shared.saveWeather (oneHour: oneHour, twoHour: twoHour, threeHour: threeHour, oneDay: oneDay, twoDay: twoDay, threeDay: threeDay, fourDay: fourDay, fiveDay: fiveDay)
+        
             
             tableView.reloadData()
         } else {
@@ -175,23 +175,23 @@ class ViewControllerWeather: UIViewController, UITableViewDataSource, UITableVie
                            switch indexPath.row {
                                
                            case 0:
-                               cell.textLabel?.text = "Температура через 3 часа: \(defaults.string(forKey: KeyWeather.oneHour))°"
+                               cell.textLabel?.text = defaults.string(forKey: KeyWeather.oneHour)
                               
                            case 1:
-                               cell.textLabel?.text = "Температура через 6 часов: \(defaults.string(forKey: KeyWeather.twoHour))°"
+                            cell.textLabel?.text = defaults.string(forKey: KeyWeather.twoHour)
                             
                            default:
-                               cell.textLabel?.text = "Температура через 9 часов: \(defaults.string(forKey: KeyWeather.threeHour))°"
+                            cell.textLabel?.text = defaults.string(forKey: KeyWeather.threeHour)
                            }
                            return cell
                        } else {
                            switch indexPath.row {
-                           case 0: cell.textLabel?.text = "Сегодня: \(defaults.string(forKey: KeyWeather.oneDay))°"
-                           case 1: cell.textLabel?.text = "Завтра: \(defaults.string(forKey: KeyWeather.twoDay))°"
-                           case 2: cell.textLabel?.text = "Послезавтра: \(defaults.string(forKey: KeyWeather.threeDay))°"
-                           case 3: cell.textLabel?.text = "После-послезавтра: \(defaults.string(forKey: KeyWeather.fourDay))°"
+                           case 0: cell.textLabel?.text = defaults.string(forKey: KeyWeather.oneDay)
+                           case 1: cell.textLabel?.text = defaults.string(forKey: KeyWeather.twoDay)
+                           case 2: cell.textLabel?.text = defaults.string(forKey: KeyWeather.threeDay)
+                           case 3: cell.textLabel?.text = defaults.string(forKey: KeyWeather.fourDay)
                            default:
-                               cell.textLabel?.text = "После-после-послезавтра: \(defaults.string(forKey: KeyWeather.fiveDay))°"
+                               cell.textLabel?.text = defaults.string(forKey: KeyWeather.fiveDay)
                            }
                             return cell
                        }

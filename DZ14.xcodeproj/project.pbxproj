@@ -19,9 +19,6 @@
 		C3483BDB2466E7A600E45CC5 /* SegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3483BDA2466E7A600E45CC5 /* SegmentController.swift */; };
 		C3483BDF246713C900E45CC5 /* ToDoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3483BDD246713C900E45CC5 /* ToDoModel.xcdatamodeld */; };
 		C3483BE52467524D00E45CC5 /* ToDoListViewControllerCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3483BE42467524D00E45CC5 /* ToDoListViewControllerCoreData.swift */; };
-		C35172DA2537854C00F937C7 /* UserDafauts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35172D92537854C00F937C7 /* UserDafauts.swift */; };
-		C39D83EA24793055004D2E32 /* ToDoViewController(save).swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D83E924793055004D2E32 /* ToDoViewController(save).swift */; };
-		C39D83EC24796A7A004D2E32 /* ToDoViewController(Realm).swift in Sources */ = {isa = PBXBuildFile; fileRef = C39D83EB24796A7A004D2E32 /* ToDoViewController(Realm).swift */; };
 		C3E6D094245F539700BF32CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E6D093245F539700BF32CD /* AppDelegate.swift */; };
 		C3E6D096245F539700BF32CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E6D095245F539700BF32CD /* SceneDelegate.swift */; };
 		C3E6D098245F539700BF32CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E6D097245F539700BF32CD /* ViewController.swift */; };
@@ -46,9 +43,6 @@
 		C3483BDA2466E7A600E45CC5 /* SegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentController.swift; sourceTree = "<group>"; };
 		C3483BDE246713C900E45CC5 /* ToDoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoModel.xcdatamodel; sourceTree = "<group>"; };
 		C3483BE42467524D00E45CC5 /* ToDoListViewControllerCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewControllerCoreData.swift; sourceTree = "<group>"; };
-		C35172D92537854C00F937C7 /* UserDafauts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDafauts.swift; sourceTree = "<group>"; };
-		C39D83E924793055004D2E32 /* ToDoViewController(save).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoViewController(save).swift"; sourceTree = "<group>"; };
-		C39D83EB24796A7A004D2E32 /* ToDoViewController(Realm).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoViewController(Realm).swift"; sourceTree = "<group>"; };
 		C3E6D090245F539700BF32CD /* DZ14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DZ14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E6D093245F539700BF32CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3E6D095245F539700BF32CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,8 +88,6 @@
 			children = (
 				C3E6D0A7245F54E400BF32CD /* ToDoViewController.swift */,
 				C33AE3312470083C00325FEC /* TaskList.swift */,
-				C39D83E924793055004D2E32 /* ToDoViewController(save).swift */,
-				C39D83EB24796A7A004D2E32 /* ToDoViewController(Realm).swift */,
 				C33AE3332470089600325FEC /* RealmManager.swift */,
 			);
 			path = Realm;
@@ -110,11 +102,23 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		C32ABDFF253E22020018BE61 /* Standart */ = {
+			isa = PBXGroup;
+			children = (
+				C3E6D093245F539700BF32CD /* AppDelegate.swift */,
+				C3E6D095245F539700BF32CD /* SceneDelegate.swift */,
+				C3E6D09E245F539B00BF32CD /* LaunchScreen.storyboard */,
+				C3E6D0A1245F539B00BF32CD /* Info.plist */,
+				C3E6D09C245F539B00BF32CD /* Assets.xcassets */,
+				C3E6D099245F539700BF32CD /* Main.storyboard */,
+			);
+			path = Standart;
+			sourceTree = "<group>";
+		};
 		C3483BCF2466DAA600E45CC5 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
 				C3483BD82466DDD100E45CC5 /* ViewControllerWeather.swift */,
-				C35172D92537854C00F937C7 /* UserDafauts.swift */,
 				C3483BD02466DD1700E45CC5 /* NetService.swift */,
 				C3483BD22466DD4900E45CC5 /* DataModels.swift */,
 				C3483BD42466DD7D00E45CC5 /* Links.swift */,
@@ -153,15 +157,10 @@
 		C3E6D092245F539700BF32CD /* DZ14 */ = {
 			isa = PBXGroup;
 			children = (
-				C3E6D093245F539700BF32CD /* AppDelegate.swift */,
-				C3E6D095245F539700BF32CD /* SceneDelegate.swift */,
+				C32ABDFF253E22020018BE61 /* Standart */,
 				C3483BDA2466E7A600E45CC5 /* SegmentController.swift */,
 				C3275E2224607FC4008ECF2C /* UserDefaults */,
-				C3E6D099245F539700BF32CD /* Main.storyboard */,
-				C3E6D09C245F539B00BF32CD /* Assets.xcassets */,
 				C30213E0246316A40076149D /* Realm */,
-				C3E6D09E245F539B00BF32CD /* LaunchScreen.storyboard */,
-				C3E6D0A1245F539B00BF32CD /* Info.plist */,
 				C3483BDC2467137A00E45CC5 /* Core Data */,
 				C3483BCF2466DAA600E45CC5 /* Weather */,
 			);
@@ -284,7 +283,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C33AE3322470083C00325FEC /* TaskList.swift in Sources */,
-				C35172DA2537854C00F937C7 /* UserDafauts.swift in Sources */,
 				C3483BD92466DDD100E45CC5 /* ViewControllerWeather.swift in Sources */,
 				C33AE3342470089600325FEC /* RealmManager.swift in Sources */,
 				C3E6D0A8245F54E400BF32CD /* ToDoViewController.swift in Sources */,
@@ -295,11 +293,9 @@
 				C3483BDB2466E7A600E45CC5 /* SegmentController.swift in Sources */,
 				C3483BD52466DD7D00E45CC5 /* Links.swift in Sources */,
 				C3E6D098245F539700BF32CD /* ViewController.swift in Sources */,
-				C39D83EC24796A7A004D2E32 /* ToDoViewController(Realm).swift in Sources */,
 				C3483BDF246713C900E45CC5 /* ToDoModel.xcdatamodeld in Sources */,
 				C3E6D094245F539700BF32CD /* AppDelegate.swift in Sources */,
 				C3483BD72466DD9C00E45CC5 /* DataSource.swift in Sources */,
-				C39D83EA24793055004D2E32 /* ToDoViewController(save).swift in Sources */,
 				C3E6D096245F539700BF32CD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

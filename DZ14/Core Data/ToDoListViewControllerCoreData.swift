@@ -76,7 +76,9 @@ class ToDoViewControllerCoreData: UIViewController {
         
         do {
             try! context.save()
-            tasks.append(taskToAdd) }
+            tasks.append(taskToAdd)
+            
+        }
         catch let error as NSError {
             print("Error: \(error)")
         }

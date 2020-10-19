@@ -5,7 +5,7 @@
 ////  Created by Юлия Чужинова on 16.05.2020.
 ////  Copyright © 2020 Юлия Чужинова. All rights reserved.
 ////
-//
+//import UIKit
 //import Foundation
 //import RealmSwift
 //
@@ -42,8 +42,7 @@
 //        
 //        let taskObj = TaskList()
 //        try! self.realm.write({ () -> Void in
-//            
-//            taskObj.done = !taskObj.done // меняет статус задачи на противоположный
+//            taskObj.done = !taskObj.done             // меняет статус задачи на противоположный
 //        })
 //        
 //    }
